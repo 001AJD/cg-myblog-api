@@ -23,4 +23,6 @@ app.listen(3000, ()=>{
 	console.log('listening on port 3000');
 });
 
-exports.api = functions.https.onRequest(app);
+const api = functions.https.onRequest(app);
+
+export { api }
