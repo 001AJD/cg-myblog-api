@@ -1,14 +1,15 @@
-const getBlogsResponseMapper = (data) =>{
+const getBlogsResponseMapper = (data) => {
 	let response = [];
-	data.forEach(item => {
+	data.forEach((item) => {
 		let object = {
-			'author': item.userId,
-			'title': item.title,
-			'body': item.body
+			id: item.id,
+			author: item.userId,
+			title: item.title,
+			body: item.body,
 		};
 		response.push(object);
 	});
 	return response;
-}
+};
 
-export { getBlogsResponseMapper }
+export { getBlogsResponseMapper };
