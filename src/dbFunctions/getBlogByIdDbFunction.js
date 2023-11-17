@@ -3,7 +3,13 @@ import { blogs } from "../models/blogs.js";
 const getBlogByIdDbFunction = async (blogId) => {
 	return new Promise((resolve, reject) => {
 		const objectId = blogId;
-		const projection = { _id: 1, userId: 1, title: 1, body: 1 };
+		const projection = {
+			_id: 1,
+			userId: 1,
+			title: 1,
+			body: 1,
+			comments: 1,
+		};
 		blogs
 			.findById(objectId, projection)
 			.exec()

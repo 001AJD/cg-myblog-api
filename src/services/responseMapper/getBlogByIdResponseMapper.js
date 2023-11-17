@@ -4,6 +4,7 @@ const getBlogByIdResponseMapper = (data) => {
 		author: data.userId,
 		title: data.title,
 		body: data.body,
+		comments: data.comments,
 	};
 };
 
