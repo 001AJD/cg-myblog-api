@@ -5,6 +5,12 @@ import { getBlogsController } from "../controllers/getBlogsController.js";
 import { getBlogByIdController } from "../controllers/getBlogByIdController.js";
 import { addBlogController } from "../controllers/addBlogController.js";
 import { addBlogCommentByIdController } from "../controllers/addCommentByIdController.js";
+import { getCommentsByBlogIdController } from "../controllers/getCommentsByBlogIdController.js";
+
+import {
+  createGetCommentsByBlogIdValidationRules,
+  validateGetCommentPayload,
+} from "../validators/validateGetComenntByBlogId.js";
 import {
   createBlogPaylodValidationRules,
   validatePayload,
@@ -17,6 +23,12 @@ import {
 
 router.get("/getblogs", getBlogsController);
 router.get("/getblog/:id", getBlogByIdController);
+router.get(
+  "/getcomments/:blogid",
+  createGetCommentsByBlogIdValidationRules(),
+  validateGetCommentPayload,
+  getCommentsByBlogIdController
+);
 router.post(
   "/createblog",
   createBlogPaylodValidationRules(),
