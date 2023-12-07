@@ -9,6 +9,7 @@ const blogsSchema = new Schema(
       {
         userName: String,
         comment: String,
+        date: Date,
       },
     ],
   },

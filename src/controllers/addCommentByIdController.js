@@ -5,6 +5,7 @@ const addBlogCommentByIdController = async (req, res) => {
   const newComment = {
     userName: req.body.userName,
     comment: req.body.comment,
+    date: new Date().toISOString(),
   };
   try {
     const response = await addBlogCommentByIdService(blogId, newComment);
