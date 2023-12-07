@@ -6,6 +6,7 @@ import { getBlogByIdController } from "../controllers/getBlogByIdController.js";
 import { addBlogController } from "../controllers/addBlogController.js";
 import { addBlogCommentByIdController } from "../controllers/addCommentByIdController.js";
 import { getCommentsByBlogIdController } from "../controllers/getCommentsByBlogIdController.js";
+import { getFeaturedBlogsController } from "../controllers/getFeaturedBlogsController.js";
 
 import {
   createGetCommentsByBlogIdValidationRules,
@@ -42,5 +43,7 @@ router.put(
   validateNewCommentPayload,
   addBlogCommentByIdController
 );
+
+router.get("/getfeaturedblogs", getFeaturedBlogsController);
 
 export { router };
