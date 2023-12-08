@@ -5,9 +5,10 @@
   },
   "scripts": {
     "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js",
     "test": "mocha ./tests/**/*.js --exit",
     "lint": "eslint ./src/**/*.js ",
-    "deploy" : "firebase deploy --only functions:api"
+    "deploy": "firebase deploy --only functions:api"
   },
   "dependencies": {
     "dotenv": "^16.0.0",
@@ -24,7 +25,8 @@
     "eslint": "^8.17.0",
     "mocha": "^10.0.0",
     "redis-mock": "^0.56.3",
-    "sinon": "^14.0.0"
+    "sinon": "^14.0.0",
+    "nodemon": "^3.0.2"
   },
   "main": "./src/index.js"
 }
