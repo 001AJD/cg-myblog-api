@@ -7,6 +7,7 @@ import { addBlogController } from "../controllers/addBlogController.js";
 import { addBlogCommentByIdController } from "../controllers/addCommentByIdController.js";
 import { getCommentsByBlogIdController } from "../controllers/getCommentsByBlogIdController.js";
 import { getFeaturedBlogsController } from "../controllers/getFeaturedBlogsController.js";
+import { likeCommentController } from "../controllers/likeCommentController.js";
 
 import {
   createGetCommentsByBlogIdValidationRules,
@@ -45,5 +46,6 @@ router.put(
 );
 
 router.get("/getfeaturedblogs", getFeaturedBlogsController);
+router.put("/:blogid/likecomment/:commentid", likeCommentController);
 
 export { router };
