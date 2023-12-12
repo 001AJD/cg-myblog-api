@@ -10,39 +10,39 @@ import { getFeaturedBlogsController } from "../controllers/getFeaturedBlogsContr
 import { likeCommentController } from "../controllers/likeCommentController.js";
 
 import {
-  createGetCommentsByBlogIdValidationRules,
-  validateGetCommentPayload,
+	createGetCommentsByBlogIdValidationRules,
+	validateGetCommentPayload,
 } from "../validators/validateGetComenntByBlogId.js";
 import {
-  createBlogPaylodValidationRules,
-  validatePayload,
+	createBlogPaylodValidationRules,
+	validatePayload,
 } from "../validators/validateNewBlogPayload.js";
 
 import {
-  createNewCommentPayloadValidationRules,
-  validateNewCommentPayload,
+	createNewCommentPayloadValidationRules,
+	validateNewCommentPayload,
 } from "../validators/validateNewCommentPayload.js";
 
 router.get("/getblogs", getBlogsController);
 router.get("/getblog/:id", getBlogByIdController);
 router.get(
-  "/getcomments/:blogid",
-  createGetCommentsByBlogIdValidationRules(),
-  validateGetCommentPayload,
-  getCommentsByBlogIdController
+	"/getcomments/:blogid",
+	createGetCommentsByBlogIdValidationRules(),
+	validateGetCommentPayload,
+	getCommentsByBlogIdController
 );
 router.post(
-  "/createblog",
-  createBlogPaylodValidationRules(),
-  validatePayload,
-  addBlogController
+	"/createblog",
+	createBlogPaylodValidationRules(),
+	validatePayload,
+	addBlogController
 );
 
 router.put(
-  "/addcomment/:blogid",
-  createNewCommentPayloadValidationRules(),
-  validateNewCommentPayload,
-  addBlogCommentByIdController
+	"/addcomment/:blogid",
+	createNewCommentPayloadValidationRules(),
+	validateNewCommentPayload,
+	addBlogCommentByIdController
 );
 
 router.get("/getfeaturedblogs", getFeaturedBlogsController);

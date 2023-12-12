@@ -1,11 +1,11 @@
-import winston from 'winston';
+import winston from "winston";
 
 const logConfiguration = {
-	level: 'info',
+	level: "info",
 	format: winston.format.combine(
 		winston.format.json()
 	),
-	'transports' : [ new winston.transports.Console() ]
+	"transports" : [ new winston.transports.Console() ]
 };
 
 const logger = winston.createLogger(logConfiguration);

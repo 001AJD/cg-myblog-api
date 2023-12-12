@@ -1,5 +1,5 @@
-import { addBlogDbFunction } from '../dbFunctions/addBlogDbFunction.js';
-import { addLog } from '../helpers/utils.js';
+import { addBlogDbFunction } from "../dbFunctions/addBlogDbFunction.js";
+import { addLog } from "../helpers/utils.js";
 
 const addBlogService = async(newBlog) => {
 	

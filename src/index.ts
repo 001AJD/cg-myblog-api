@@ -1,7 +1,6 @@
 import express from "express";
 import { router as blogsRouter } from "./routes/blogs.js";
 import { createConenction } from "./dbconfig/mongoConnection.js";
-import { errorHandler } from "./middlewares/errorHandler.js";
 import { validateApiKey } from "./middlewares/validateApiKey.js";
 import helmet from "helmet";
 import cors from "cors";

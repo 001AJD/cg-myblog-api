@@ -1,5 +1,5 @@
-import { addBlogService } from '../services/addBlogService.js';
-import { addLog } from '../helpers/utils.js';
+import { addBlogService } from "../services/addBlogService.js";
+import { addLog } from "../helpers/utils.js";
 
 const addBlogController = async (req,res) => {
 	const newBlog = {

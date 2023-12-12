@@ -1,4 +1,4 @@
-import { logger } from './logger.js';
+import { logger } from "./logger.js";
 
 const addLog = (req, message, startTime, endTime) => {
 	const time = ((endTime - startTime) / 1000000n); // convert nano seconds to miliseconds

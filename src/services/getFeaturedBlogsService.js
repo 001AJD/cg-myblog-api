@@ -2,15 +2,15 @@ import { getFeaturedBlogsDbFunction } from "../dbFunctions/getFeaturedBlogsDbFun
 import { getFeaturedBlogsResponseMapper } from "./responseMapper/getFeaturedBlogsResponseMapper.js";
 
 const getFeaturedBlogsService = () => {
-  return new Promise((resolve, reject) => {
-    getFeaturedBlogsDbFunction()
-      .then((dbResponse) => {
-        resolve(getFeaturedBlogsResponseMapper(dbResponse));
-      })
-      .catch((err) => {
-        reject(err);
-      });
-  });
+	return new Promise((resolve, reject) => {
+		getFeaturedBlogsDbFunction()
+			.then((dbResponse) => {
+				resolve(getFeaturedBlogsResponseMapper(dbResponse));
+			})
+			.catch((err) => {
+				reject(err);
+			});
+	});
 };
 
 export { getFeaturedBlogsService };
