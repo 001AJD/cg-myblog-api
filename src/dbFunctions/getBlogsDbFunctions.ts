@@ -1,4 +1,4 @@
-import { blogs } from "../models/blogs.js";
+import { blogs } from "../models/blogs.ts";
 
 const getAllBlogsDbFunction = async () => {
 	return new Promise((resolve, reject) => {

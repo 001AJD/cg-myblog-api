@@ -1,7 +1,7 @@
-declare global {
-	namespace Express {
-		interface Request {
-			"api-key": string;
-		}
-	}
-}
+// declare global {
+// 	namespace Express {
+// 		interface Request {
+// 			"api-key": string;
+// 		}
+// 	}
+// }

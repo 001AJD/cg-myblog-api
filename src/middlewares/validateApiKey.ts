@@ -1,6 +1,7 @@
-import dotenv from "dotenv";
-dotenv.config();
-const validateApiKey = (req: Request, res: Response, next: () => void) => {
+import { Request, Response } from "express";
+import { config } from "dotenv";
+config();
+const validateApiKey = (req: Request, res: Response, next: any) => {
 	if (req.get("api-key") === process.env.API_KEY) {
 		next();
 	} else {

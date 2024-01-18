@@ -1,17 +1,18 @@
-import express from "express";
-import { router as blogsRouter } from "./routes/blogs.js";
-import { createConenction } from "./dbconfig/mongoConnection.js";
-import { validateApiKey } from "./middlewares/validateApiKey.js";
-import helmet from "helmet";
-import cors from "cors";
+import * as express from "express";
+import { createConenction } from "./dbconfig/mongoConnection.ts";
+import { validateApiKey } from "./middlewares/validateApiKey.ts";
+import { router as blogsRouter } from "./routes/blogs.ts";
+
+import * as helmet from "helmet";
+import * as cors from "cors";
 import * as functions from "firebase-functions";
 
-const app = express();
+const app = express.default();
 
 // middlewares
 app.use(express.json());
-app.use(helmet());
-app.use(cors());
+app.use(helmet.default());
+app.use(cors.default());
 
 createConenction(); // db connection
 

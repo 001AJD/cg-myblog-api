@@ -1,6 +1,6 @@
-import { getAllBlogsDbFunction } from "../dbFunctions/getBlogsDbFunctions.js";
+import { getAllBlogsDbFunction } from "../dbFunctions/getBlogsDbFunctions.ts";
+import { IDBResponse } from "../types/getAllBlogs.ts";
 import { getBlogsResponseMapper } from "./responseMapper/getBlogsResponseMapper.js";
-import { addLog } from "../helpers/utils.js";
 
 const getBlogsService = async () => {
 	return new Promise((resolve, reject) => {
